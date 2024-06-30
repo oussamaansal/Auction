@@ -1,0 +1,42 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<div class="container mt-5 custom-container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg custom-card">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4 custom-title">Login</h2>
+                    
+                    {% if message %}
+                        <div class="alert alert-danger text-center custom-alert" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endif %}
+                    
+                    <form action="{% url 'login' %}" method="post" class="needs-validation custom-form" novalidate>
+                        {% csrf_token %}
+                        <div class="form-group custom-form-group">
+                            <input autofocus class="form-control custom-input" type="text" name="username" placeholder="Username" required>
+                            <div class="invalid-feedback custom-feedback">
+                                Please enter your username.
+                            </div>
+                        </div>
+                        <div class="form-group custom-form-group">
+                            <input class="form-control custom-input" type="password" name="password" placeholder="Password" required>
+                            <div class="invalid-feedback custom-feedback">
+                                Please enter your password.
+                            </div>
+                        </div>
+                        <button class="btn custom-btn btn-block mt-4" type="submit">Login</button>
+                    </form>
+                    
+                    <div class="text-center mt-3">
+                        Don't have an account? <a href="{% url 'register' %}">Register here.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

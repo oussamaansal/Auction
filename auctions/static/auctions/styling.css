@@ -1,0 +1,250 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+.my-4{text-align: center;}
+.card-title{text-align: center;}
+.card-text{size: 20;}
+.card-img-top-index {
+    height: 300px; /* Set a fixed height for all images */
+    object-fit: cover;
+   }
+.card w-100{width: 50%;}
+.navbar {
+    background-color: #343a40; /* Dark color for the navbar */
+}
+
+.navbar-brand {
+    color: #fff; /* White text for the brand */
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* White text for the links */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ccc; /* Lighter color on hover */
+}
+
+.navbar .user-info {
+    color: #ccc; /* Light color for user info */
+}
+
+.navbar .user-info strong {
+    color: #fff; /* White color for strong text in user info */
+}
+/* Add this to your CSS file */
+.card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.card-subtitle {
+    font-size: 0.9rem;
+    color: #6c757d; /* Adjusted color for better visibility */
+}
+
+.card-text {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 400px; /* Set a fixed height for images */
+}
+
+.btn-primary {
+    background-color: #ff6f61;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-4, .mt-3 {
+    margin-top: 1.5rem !important;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem !important;
+}
+
+h6 {
+    margin-top: 1rem;
+}
+
+h7 {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.card {
+    background-color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: #343a40;
+}
+
+.card-text {
+    color: #6c757d;
+}
+
+.custom-btnn {
+    background-color: #34495e;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-btnn:hover {
+    background-color: #95a5a6;
+    transform: translateY(-2px);
+}
+
+
+.btn-primary:hover {
+    background-color: #ff4c39;
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+h4, h5, h6 {
+    color: #343a40;
+}
+
+/* Centering buttons */
+.text-center button {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Watchlist count badge */
+.watchlist-count {
+    background-color: #dc3545;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+.error{color: red;}
+
+.custom-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.custom-card {
+    border: none;
+    border-radius: 0.75rem;
+    background: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-title {
+    font-weight: 600;
+    font-size: 1.75rem;
+    color: #343a40;
+}
+
+.custom-btn {
+    background-color: #ff6f61;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #ff4c39;
+    transform: translateY(-2px);
+}
+
+.custom-input {
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease;
+}
+
+.custom-input:focus {
+    border-color: #ff6f61;
+    box-shadow: 0 0 0 0.2rem rgba(255, 111, 97, 0.25);
+}
+
+.custom-feedback {
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: #e3342f;
+}
+
+.was-validated .custom-input:invalid ~ .custom-feedback,
+.custom-input.is-invalid ~ .custom-feedback {
+    display: block;
+}
+
+.custom-alert {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}

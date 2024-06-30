@@ -1,0 +1,38 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Won Auctions</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    {%if auctions%}
+    {% for auction in auctions %}
+    <div class="col d-flex align-items-stretch">
+      <div class="card w-100">
+        <form action="{% url 'auction_detail' auction_id=auction.id %}" method="get" class="d-flex flex-column h-100">
+          <button type="submit" class="btn p-0 border-0 h-100" style="background: none;">
+            <img src="{{ auction.image_url }}" class="card-img-top" alt="Image of {{ auction.title }}">
+            <div class="card-body">
+              <h5 class="card-title text-center">{{ auction.title }}</h5>
+            </div>
+          </button>
+        </form>
+      </div>
+    </div>
+    {% endfor %}
+   
+  </div>
+  {%else%}
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+        
+            <div class="alert alert-danger text-center" role="alert">
+                Unfortunately, you have not won any auctions at this time. Please try again later or explore other listings.
+           
+        </div>
+    </div>
+</div>
+
+
+  {%endif%}
+</div>
+{% endblock %}

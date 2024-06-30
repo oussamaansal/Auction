@@ -1,0 +1,60 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<div class="container mt-5 custom-container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg custom-card">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4 custom-title">Register</h2>
+                    
+                    {% if message %}
+                        <div class="alert alert-danger text-center custom-alert" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endif %}
+                    
+                    <form action="{% url 'register' %}" method="post" class="needs-validation custom-form" novalidate>
+                        {% csrf_token %}
+                        <div class="form-group custom-form-group">
+                            <input class="form-control custom-input" type="text" name="full_name" placeholder="Full name" required>
+                            <div class="invalid-feedback custom-feedback">
+                                Please enter your full name.
+                            </div>
+                        </div>
+                        <div class="form-group custom-form-group">
+                            <input class="form-control custom-input" autofocus type="text" name="username" placeholder="Username" required>
+                            <div class="invalid-feedback custom-feedback">
+                                Please enter a username.
+                            </div>
+                        </div>
+                        <div class="form-group custom-form-group">
+                            <input class="form-control custom-input" type="email" name="email" placeholder="Email Address" required>
+                            <div class="invalid-feedback custom-feedback">
+                                Please enter a valid email address.
+                            </div>
+                        </div>
+                        <div class="form-group custom-form-group">
+                            <input class="form-control custom-input" type="password" name="password" placeholder="Password" required>
+                            <div class="invalid-feedback custom-feedback">
+                                Please enter a password.
+                            </div>
+                        </div>
+                        <div class="form-group custom-form-group">
+                            <input class="form-control custom-input" type="password" name="confirmation" placeholder="Confirm Password" required>
+                            <div class="invalid-feedback custom-feedback">
+                                Please confirm your password.
+                            </div>
+                        </div>
+                        <button class="btn custom-btn btn-block mt-4" type="submit">Create Auction</button>
+                    </form>
+                    
+                    <div class="text-center mt-3">
+                        Already have an account? <a href="{% url 'login' %}">Log In here.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "auctions/layout.html" %} {% block body %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-lg">
+        <div class="card-body">
+          <h2 class="card-title text-center mb-4 text-primary">
+            Create New Auction
+          </h2>
+          <form
+            method="POST"
+            action="{% url 'newauct' %}"
+            class="needs-validation"
+            novalidate
+          >
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="id_title" class="text-secondary">Title</label>
+              {{ form.title }}
+              <div class="error">{{ form.title.errors }}</div>
+            </div>
+            <div class="form-group">
+              <label for="id_start_bid" class="text-secondary"
+                >Starting Bid</label
+              >
+              {{ form.start_bid }}
+              <div class="error">{{ form.start_bid.errors }}</div>
+            </div>
+            <div class="form-group">
+              <label for="id_desc" class="text-secondary">Description</label>
+              {{ form.desc }}
+              <div class="error">{{ form.desc.errors }}</div>
+            </div>
+            <div class="form-group">
+              <label for="id_categ" class="text-secondary">Category</label>
+              {{ form.categ }}
+              <div class="error">{{ form.categ.errors }}</div>
+            </div>
+            <div class="form-group">
+              <label for="id_image_url" class="text-secondary">Image URL</label>
+              {{ form.image_url }}
+              <div class="error">{{ form.image_url.errors }}</div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block mt-4">
+              Create Auction
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
